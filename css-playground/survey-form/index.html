@@ -1,0 +1,134 @@
+<!-- 
+  Author: @idindrakusuma
+  github.com/idindrakusuma/css-playground 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Survey Form</title>
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="./assets/css/style.css" rel="stylesheet"/> 
+</head>
+<body>
+  <h1 id="title">Survey Form</h1>
+  <div class="form-container">
+    <p id="description">Let us know how we can improve freeCodeCamp</p>
+    <!-- form start -->
+    <form id="survey-form" method="GET">
+      <!-- name field -->
+      <div class="row">
+        <div class="label-field">
+          <label for="name-label">* Name</label>
+        </div>
+        <div class="input-div">
+          <input type="text" class="input-field" name="name" id="name-label" placeholder="input your name" required/>
+        </div>
+      </div>
+      <!-- email field -->
+      <div class="row">
+        <div class="label-field">
+          <label for="email-label">* Email</label>
+        </div>
+        <div class="input-div">
+          <input type="email" class="input-field" name="email" id="email-label" placeholder="input your email" required/>
+        </div>
+      </div>
+      <!-- age -->
+      <div class="row">
+        <div class="label-field">
+          <label for="age-label">* Age</label>
+        </div>
+        <div class="input-div">
+          <input type="number" class="input-field" name="age" id="age-label" placeholder="your age.." min="13" max="30" required/>
+        </div>
+      </div>
+      <!-- user role -->
+      <div class="row">
+        <div class="label-field label-dropdown">
+          <label for="dropdown">Which option best describes your current role?</label>
+        </div>
+        <div class="input-div">
+          <select id="dropdown" name="dropdown">
+            <option value="student">Student</option>
+            <option value="web_developer">Web Developer</option>
+            <option value="other">other</option>
+          </select>
+        </div>
+      </div>
+      <!-- likely freecodecamp -->
+      <div class="row">
+        <div class="label-field label-dropdown">
+          <label for="checkbox">* How likely is that you would recommend freeCodeCamp to a friend?</label>
+        </div>
+        <div class="input-div">
+          <ul style="list-style: none;">
+            <li class="li-radio">
+              <label>
+                <input type="radio" checked class="radio-input" value="1" name="recomendedCodeCaamp"> Definitely
+              </label>
+            </li>
+            <li class="li-radio">
+              <label>
+                <input type="radio" class="radio-input" value="2" name="recomendedCodeCaamp"> Maybe
+              </label>
+            </li>
+            <li class="li-radio">
+              <label>
+                <input type="radio" class="radio-input" value="3" name="recomendedCodeCaamp"> Not Sure
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- suggestion from users -->
+      <div class="row">
+        <div class="label-field">
+          <label for="comment">Any Comments or Suggestions?</label>
+        </div>
+        <div class="input-div">
+          <textarea name="comment" id="comment" placeholder="input your comments.."></textarea>
+        </div>
+      </div>
+      <!-- need to improve -->
+      <div class="row">
+        <div class="label-field">
+          <label for="">Things that should be improved in the future.<br>(Check all that apply)</label>
+        </div>
+        <div class="input-div">
+          <ul style="list-style: none;">
+            <li class="li-checkbox">
+              <label for="">
+                <input type="checkbox" name="improveThings" value="1"> Videos
+              </label> 
+            </li>
+            <li class="li-checkbox">
+              <label for="">
+                <input type="checkbox" name="improveThings" value="2"> Front-end Project
+              </label>
+            </li>
+            <li class="li-checkbox">  
+              <label for="">
+                <input type="checkbox" name="improveThings" value="3"> Back-end Project
+              </label>
+            </li>
+            <li class="li-checkbox">
+              <label for="">
+                <input type="checkbox" name="improveThings" value="4"> Challenges
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <!-- submit button -->
+    <div class="row">
+      <button id="submit" type="submit">Submit</button>
+    </div>
+    </form>    
+    <!-- form end -->
+  </div>
+</body>
+</html>
